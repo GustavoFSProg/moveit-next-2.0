@@ -13,7 +13,10 @@ function Profile() {
 
       <div>
         <strong> Gustavo Sohne</strong>
-        <p> Level 1</p>
+        <p>
+          <img src="icons/level.svg" alt="foto" />
+          Level 1
+        </p>
       </div>
     </div>
   )

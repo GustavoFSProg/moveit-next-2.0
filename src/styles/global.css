@@ -48,37 +48,6 @@ a {
   text-decoration: none;
 }
 
-.experience-bar {
-  display: flex;
-  align-items: 'center';
-}
-
-.experience-bar span {
-  font-size: 1rem;
-}
-
-.experience-bar > div {
-  flex: 1;
-  height: 4px;
-  border-radius: 4px;
-  background: var(--gray-line);
-  margin: 0.6rem 1.5rem;
-  position: relative;
-}
-
-.experience-bar > div > div {
-  flex: 1;
-  height: 4px;
-  border-radius: 4px;
-  background: var(--green);
-}
-
-.current-expirence {
-  position: absolute;
-  top: 12px;
-  transform: translateX(-50%);
-}
-
 .container {
   height: 100vh;
   max-width: 992px;

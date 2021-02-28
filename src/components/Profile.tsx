@@ -1,14 +1,14 @@
 import React from 'react'
-import imagem from './a.jpg'
 import '../../imagem.d.ts'
+import style from '../styles/pages/Profile.module.css'
 
 function Profile() {
   return (
-    <div>
+    <div className={style.profileContainer}>
       <img
         src="https://avatars.githubusercontent.com/u/51864014?s=400&u=431f414ca00ec298196ca8a4f948e4ccbb52b550&v=4"
         alt="foto"
-        style={{ width: '25%' }}
+        className={style.imagem}
       />
 
       <div>

@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../imagem.d.ts'
 import style from '../styles/pages/Profile.module.css'
 
 function Profile() {

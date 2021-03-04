@@ -1,43 +1,20 @@
 import { useContext, useEffect, useState } from 'react'
 import { setTimeout, clearTimeout } from 'timers'
 import { ChallengesContext } from '../contexts/ChallengesContext'
+import { CountdownContext } from '../contexts/CountdownContext'
 import styles from '../styles/pages/Countdown.module.css'
 
 let countdownTimeout: NodeJS.Timeout
 
 export function Countdown() {
-  const [time, setTime] = useState(0.1 * 60)
-  // const [time, setTime] = useState(25 * 60)
-  const [isActive, setIsActive] = useState(false)
-  const minutes = Math.floor(time / 60)
-  const [hashFinished, setHasFinished] = useState(false)
-
-  const seconds = time % 60
-
-  const { StartNewChallenge } = useContext(ChallengesContext)
-
-  function startCountdon() {
-    setIsActive(true)
-  }
-
-  function resetCountdown() {
-    clearTimeout(countdownTimeout)
-    setIsActive(false)
-
-    setTime(0.1 * 60)
-  }
-
-  useEffect(() => {
-    if (isActive && time > 0) {
-      countdownTimeout = setTimeout(() => {
-        setTime(time - 1)
-      }, 1000)
-    } else if (isActive && time === 0) {
-      setHasFinished(true)
-      setIsActive(false)
-      StartNewChallenge()
-    }
-  }, [isActive, , time])
+  const {
+    isActive,
+    minutes,
+    seconds,
+    hasFinished,
+    startCountdown,
+    resetCountdown,
+  } = useContext(CountdownContext)
 
   const [minutleft, miuteRight] = String(minutes).padStart(2, '0').split('')
   const [secondleft, secondRight] = String(seconds).padStart(2, '0').split('')
@@ -55,7 +32,7 @@ export function Countdown() {
           <span>{secondRight}</span>
         </div>
       </div>
-      {hashFinished ? (
+      {hasFinished ? (
         <button disabled className={styles.CountdownButtonFinished}>
           Ciclo Encerrado
         </button>
@@ -71,7 +48,7 @@ export function Countdown() {
             </button>
           ) : (
             <button
-              onClick={() => startCountdon()}
+              onClick={() => startCountdown()}
               type="button"
               className={styles.CountdownButton}
             >

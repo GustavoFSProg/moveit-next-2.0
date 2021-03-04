@@ -21,6 +21,7 @@ interface ChallengeContextData {
   resetChallenge: () => void
   expierenceToNextLevel: number
   CompleteChallenge: () => void
+  challengesCompleted: number
 }
 
 export const ChallengesContext = createContext({} as ChallengeContextData)
@@ -52,7 +53,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
   function CompleteChallenge() {
     if (!activeChallenge) {
       return
-    }  
+    }
 
     const { amount } = activeChallenge
 
@@ -79,6 +80,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
         activeChallenge,
         resetChallenge,
         expierenceToNextLevel,
+        challengesCompleted,
       }}
     >
       {children}

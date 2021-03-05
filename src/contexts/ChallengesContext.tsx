@@ -77,11 +77,11 @@ export function ChallengesProvider({
 
     new Audio('/notification.mp3').play()
 
-    // if (Notification.permission === 'granted') {
-    //   new Notification('Novo desafio', {
-    //     body: `Valendo ${challenge.amount} xp!`,
-    //   })
-    // }
+    //   if (Notification.permission === 'granted') {
+    //     new Notification('Novo desafio', {
+    //       body: `Valendo ${challenge.amount} xp!`,
+    //     })
+    //   }
   }
 
   function resetChallenge() {

@@ -30,8 +30,8 @@ export function CountdownProvider({ children }: CountownProviderProps) {
   const { StartNewChallenge } = useContext(ChallengesContext)
 
   // const [time, setTime] = useState(0.1 * 60)
-  const [time, setTime] = useState(1 * 60)
-  // const [time, setTime] = useState(25 * 60)
+  // const [time, setTime] = useState(1 * 60)
+  const [time, setTime] = useState(25 * 60)
   const [isActive, setIsActive] = useState(false)
   const [hasFinished, setHasFinished] = useState(false)
 

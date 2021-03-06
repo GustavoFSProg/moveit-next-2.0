@@ -27,4 +27,5 @@
   position: absolute;
   top: 12px;
   transform: translateX(-50%);
+  width: 50%;
 }

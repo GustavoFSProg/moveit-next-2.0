@@ -22,12 +22,12 @@ export function Countdown() {
   return (
     <div>
       <div className={styles.countdownContainer}>
-        <div>
+        <div className={styles.innerDiv}>
           <span>{minutleft}</span>
           <span>{miuteRight}</span>
         </div>
         <span>:</span>
-        <div>
+        <div className={styles.innerDiv}>
           <span>{secondleft}</span>
           <span>{secondRight}</span>
         </div>

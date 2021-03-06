@@ -28,7 +28,7 @@ function ChallengerBox() {
           <header>Ganhe {activeChallenge.amount}</header>
           <main>
             <img src={`icons/${activeChallenge.type}.svg`} />
-            <strong>Novo D esafio</strong>
+            <strong>Novo Desafio</strong>
             <p>{activeChallenge.description}</p>
           </main>
 

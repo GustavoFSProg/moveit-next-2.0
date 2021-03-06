@@ -22,4 +22,7 @@
     flex-direction: column;
     align-content: center;
   }
+  .container {
+    height: 110vh;
+  }
 }

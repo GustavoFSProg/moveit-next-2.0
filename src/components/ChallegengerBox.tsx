@@ -25,7 +25,7 @@ function ChallengerBox() {
     <div className={styles.challengeBoxContainer}>
       {activeChallenge ? (
         <div className={styles.challengerActive}>
-          <header>Ganhe {activeChallenge.amount}</header>
+          <header>Ganhe {activeChallenge.amount} xp</header>
           <main>
             <img src={`icons/${activeChallenge.type}.svg`} />
             <strong>Novo Desafio</strong>
@@ -53,7 +53,7 @@ function ChallengerBox() {
         <div className={styles.challengeNotActive}>
           <strong>Finalize um ciclo para receber um Desafio </strong>
           <p>
-            <img src="icons/level-up.svg" alt="level UP" /> Avance de leel
+            <img src="icons/level-up.svg" alt="level UP" /> Avance de level
             completando desafios
           </p>
         </div>

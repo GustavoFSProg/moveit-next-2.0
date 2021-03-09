@@ -8,6 +8,7 @@ import ChallengerBox from '../components/ChallegengerBox'
 import { CountdownProvider } from '../contexts/CountdownContext'
 import { GetServerSideProps } from 'next'
 import { ChallengesProvider } from '../contexts/ChallengesContext'
+import { useRouter } from 'next/router'
 
 interface HomeProps {
   level: number
@@ -16,6 +17,11 @@ interface HomeProps {
 }
 
 export default function Home(props) {
+  const history = useRouter()
+
+  function ListRoute() {
+    history.push('/routes/ListUsers')
+  }
   return (
     <ChallengesProvider
       level={props.level}
@@ -34,6 +40,7 @@ export default function Home(props) {
               <Profile />
               <CompleatedChallenges />
               <Countdown />
+              <button onClick={ListRoute}>Listagem</button>
             </div>
             <div>
               <ChallengerBox />

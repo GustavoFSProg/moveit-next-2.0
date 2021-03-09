@@ -20,7 +20,7 @@ export default function Home(props) {
   const history = useRouter()
 
   function ListRoute() {
-    history.push('/routes/ListUsers')
+    history.push('/routes/Register')
   }
   return (
     <ChallengesProvider
@@ -40,7 +40,7 @@ export default function Home(props) {
               <Profile />
               <CompleatedChallenges />
               <Countdown />
-              <button onClick={ListRoute}>Listagem</button>
+              <button onClick={ListRoute}>Cadastro</button>
             </div>
             <div>
               <ChallengerBox />

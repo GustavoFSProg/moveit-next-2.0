@@ -22,8 +22,8 @@ function ListUsers() {
 
   return (
     <div>
-      <Header />
       <div className={styles.container}>
+        <Header />
         <div style={{ marginTop: '50px' }}>
           <ul className={styles.card}>
             {lista.map((list) => (

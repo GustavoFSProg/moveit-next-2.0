@@ -25,29 +25,33 @@ function ListUsers() {
       <Header />
       <div className={styles.container}>
         <div style={{ marginTop: '50px' }}>
-          {lista.map((list) => (
-            <ul key={list.id} className={styles.card}>
-              <img
-                src={`https://api-moveit.herokuapp.com/files/${list.image}`}
-                alt="foto"
-                style={{ width: '30%' }}
-              />
-              <br />
-              <br />
+          <ul className={styles.card}>
+            {lista.map((list) => (
+              <div className={styles.contain} key={list.id}>
+                <li>
+                  <img
+                    src={`https://api-moveit.herokuapp.com/files/${list.image}`}
+                    alt="foto"
+                    style={{ width: '30%' }}
+                  />
+                </li>
+                <br />
+                <br />
 
-              <li>
-                <strong>Nome: </strong>
-                {list.name}
-              </li>
+                <li>
+                  <strong>Nome: </strong>
+                  {list.name}
+                </li>
 
-              <li>
-                <strong>Email: </strong>
-                {list.email}
-              </li>
-              <br />
-              <br />
-            </ul>
-          ))}
+                <li>
+                  <strong>Email: </strong>
+                  {list.email}
+                </li>
+                <br />
+                <br />
+              </div>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

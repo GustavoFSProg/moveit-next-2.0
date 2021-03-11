@@ -40,7 +40,7 @@ export default function Register() {
       <div style={{ marginTop: '50px' }}>
         <form onSubmit={handleSubmit} className={styles.janela}>
           <div className={styles.profile_container}>
-            <div style={{ border: '1px solid  #d3e2e5' }}>
+            <div>
               <legend>
                 <p className={styles.legenda}>Cadastrar Usuário</p>
               </legend>
@@ -95,9 +95,9 @@ export default function Register() {
               </div>
 
               <div className={styles.inputBlock}>
-                <button className={styles.confirmButton} type="submit">
+                {/* <button className={styles.confirmButton}>
                   <span>Cadastrar</span>
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

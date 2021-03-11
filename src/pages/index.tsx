@@ -2,6 +2,7 @@ import { ExperienceBar } from '../components/ExperienceBar'
 import Head from 'next/head'
 import Profile from '../components/Profile'
 import styles from '../styles/pages/Home.module.css'
+import Header from '../components/Header'
 import CompleatedChallenges from '../components/CompleatedChallenges'
 import { Countdown } from '../components/Countdown'
 import ChallengerBox from '../components/ChallegengerBox'
@@ -28,6 +29,7 @@ export default function Home(props) {
       challengesCompleated={props.challengesCompleted}
       currentExpierence={props.currentExpierence}
     >
+      <Header />
       <div className={styles.container}>
         <Head>
           <title> Inicio | Move.it</title>
@@ -40,7 +42,6 @@ export default function Home(props) {
               <Profile />
               <CompleatedChallenges />
               <Countdown />
-              <button onClick={ListRoute}>Cadastro</button>
             </div>
             <div>
               <ChallengerBox />

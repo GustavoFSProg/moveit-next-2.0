@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-// import { useHistory } from 'react-router-dom'
+import { useRouter } from 'next/router'
 import api from '../../services/api'
-// import './style.css'
+import styles from '../../styles/pages/Register.module.css'
+import Header from '../../components/Header'
 
 export default function Register() {
   const [name, setName] = useState('')
@@ -9,7 +10,7 @@ export default function Register() {
   const [password, setPassword] = useState('')
   const [image, setImage]: any = useState([])
 
-  // const history = useHistory()
+  const history = useRouter()
 
   async function handleSubmit(event) {
     event.preventDefault()
@@ -26,7 +27,7 @@ export default function Register() {
 
       alert('Cadastro realizado com sucesso!')
 
-      // return history.push('/')
+      return history.push('/routes/ListUsers')
     } catch (error) {
       console.log(error)
       return alert(`Deu erro no front ${error}`)
@@ -34,70 +35,75 @@ export default function Register() {
   }
 
   return (
-    <div className="container">
-      <form onSubmit={handleSubmit} className="janela">
-        <div className="profile-container">
-          <fieldset>
-            <legend>Cadastrar Usuario</legend>
-            <br />
-            <br />
-            <div className="input-block">
-              <label htmlFor="name">Nome: </label>
+    <div className={styles.container}>
+      <Header />
+      <div style={{ marginTop: '50px' }}>
+        <form onSubmit={handleSubmit} className={styles.janela}>
+          <div className={styles.profile_container}>
+            <div style={{ border: '1px solid  #d3e2e5' }}>
+              <legend>
+                <p className={styles.legenda}>Cadastrar Usuario</p>
+              </legend>
               <br />
-              <input
-                id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </div>
-            <br />
-            <br />
-            <div className="input-block">
-              <label htmlFor="name">Email: </label>
               <br />
-              <input
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <br />
-            <br />
+              <div className={styles.inputBlock}>
+                <label htmlFor="name">Nome: </label>
+                <br />
+                <input
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <br />
+              <br />
+              <div className={styles.inputBlock}>
+                <label htmlFor="name">Email: </label>
+                <br />
+                <input
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <br />
+              <br />
 
-            <div className="input-block">
-              <label htmlFor="name">Password</label>
+              <div className={styles.inputBlock}>
+                <label htmlFor="name">Password</label>
+                <br />
+                <input
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  type="password"
+                />
+              </div>
               <br />
-              <input
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                type="password"
-              />
-            </div>
-            <br />
-            <br />
+              <br />
 
-            <div className="input-block">
-              <label>Imagem:</label>
+              <div className={styles.inputBlock}>
+                <label>Imagem:</label>
+                <br />
+                <br />
+                <input
+                  type="file"
+                  id="image"
+                  className="botao-imagem"
+                  onChange={(e) => setImage(e.target.files[0])}
+                />
+              </div>
               <br />
               <br />
-              <input
-                type="file"
-                id="image"
-                className="botao-imagem"
-                onChange={(e) => setImage(e.target.files[0])}
-              />
+              <div className={styles.inputBlock}>
+                <button className="confirm-button" type="submit">
+                  Cadastrar
+                </button>
+              </div>
             </div>
-            <br />
-            <br />
-            <div className="input-block">
-              <button className="confirm-button" type="submit">
-                Cadastrar
-              </button>
-            </div>
-          </fieldset>
-        </div>
-      </form>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }

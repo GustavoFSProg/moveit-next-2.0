@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../components/Header'
 import api from '../../services/api'
+import styles from '../../styles/pages/ListUser.module.css'
 
 function ListUsers() {
   const [lista, setLista] = useState([])
@@ -22,24 +23,32 @@ function ListUsers() {
   return (
     <div>
       <Header />
-      <div style={{ marginTop: '50px' }}>
-        {lista.map((list) => (
-          <ul key={list.id}>
-            <img
-              src={`https://api-moveit.herokuapp.com/files/${list.image}`}
-              alt="foto"
-              style={{ width: '20%' }}
-            />
-            <br />
-            <br />
+      <div className={styles.container}>
+        <div style={{ marginTop: '50px' }}>
+          {lista.map((list) => (
+            <ul key={list.id} className={styles.card}>
+              <img
+                src={`https://api-moveit.herokuapp.com/files/${list.image}`}
+                alt="foto"
+                style={{ width: '30%' }}
+              />
+              <br />
+              <br />
 
-            <li>{list.name}</li>
-            <li>{list.email}</li>
-            <br />
-            <br />
-            <br />
-          </ul>
-        ))}
+              <li>
+                <strong>Nome: </strong>
+                {list.name}
+              </li>
+
+              <li>
+                <strong>Email: </strong>
+                {list.email}
+              </li>
+              <br />
+              <br />
+            </ul>
+          ))}
+        </div>
       </div>
     </div>
   )

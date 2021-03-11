@@ -1,7 +1,7 @@
 .profileContainer {
   display: flex;
   align-items: 'center';
-  background: green;
+  background: var(--blue);
   color: white;
   height: 3.1rem;
   justify-content: center;

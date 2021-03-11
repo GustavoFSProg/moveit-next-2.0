@@ -1,0 +1,59 @@
+.container {
+  height: 100vh;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 700px) {
+  .profileContainer {
+    margin-top: 19px;
+  }
+}
+
+.card {
+  width: 28.5rem;
+  height: 16.5rem;
+  border-radius: 10%;
+  background: lightgrey;
+  margin-bottom: 15px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+
+  padding-top: 50px;
+  padding-left: 50px;
+
+  display: block;
+}
+
+.card li {
+  width: 25.5rem;
+  margin-bottom: 10px;
+}
+
+.profileContainer div {
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.profileContainer div strong {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--title);
+}
+
+.profileContainer div p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.profileContainer div p img {
+  margin-right: 0.5rem;
+}

@@ -25,12 +25,12 @@
 }
 
 .inputBlock .confirmButton {
-  background: #e6ffe6;
+  background: var(--blue);
   border-radius: 12px;
 }
 
 .inputBlock .confirmButton span {
-  color: #008fb3;
+  color: white;
   padding-left: 10px;
   padding-right: 10px;
   font-weight: bold;
@@ -101,6 +101,7 @@
   font-size: 26px;
   padding-top: 15px;
   padding-left: 15px;
+  color: var(--blue);
 }
 
 .janela button:hover {

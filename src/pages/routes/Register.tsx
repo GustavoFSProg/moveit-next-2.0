@@ -42,7 +42,7 @@ export default function Register() {
           <div className={styles.profile_container}>
             <div style={{ border: '1px solid  #d3e2e5' }}>
               <legend>
-                <p className={styles.legenda}>Cadastrar Usuario</p>
+                <p className={styles.legenda}>Cadastrar Usuário</p>
               </legend>
               <br />
               <br />
@@ -84,7 +84,7 @@ export default function Register() {
 
               <div className={styles.inputBlock}>
                 <label>Imagem:</label>
-                <br />
+
                 <br />
                 <input
                   type="file"
@@ -93,11 +93,10 @@ export default function Register() {
                   onChange={(e) => setImage(e.target.files[0])}
                 />
               </div>
-              <br />
-              <br />
+
               <div className={styles.inputBlock}>
-                <button className="confirm-button" type="submit">
-                  Cadastrar
+                <button className={styles.confirmButton} type="submit">
+                  <span>Cadastrar</span>
                 </button>
               </div>
             </div>

@@ -24,13 +24,25 @@
   height: 50%;
 }
 
+.inputBlock .confirmButton {
+  background: #e6ffe6;
+  border-radius: 12px;
+}
+
+.inputBlock .confirmButton span {
+  color: #008fb3;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
 .janela legend {
   width: 100%;
 
   font-size: 32px;
   line-height: 34px;
   /* color: #5c8599; */
-  color: #567c8f;
+  color: green;
 
   font-weight: 700;
 
@@ -85,8 +97,14 @@
   transition: background-color 0.2s;
 }
 
+.legenda {
+  font-size: 26px;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
 .janela button:hover {
-  background: #36cf82;
+  background: #99ff99;
 }
 
 @media screen and (max-width: 700px) {
